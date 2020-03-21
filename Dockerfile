@@ -1,10 +1,6 @@
 FROM alpine:3.11
 
-# set version label
-ARG BUILD_DATE="20200321"
-ARG SO_VERSION="3.11"
 ARG DDCLIENT_VERSION="v3.9.1"
-LABEL build_version="${SO_VERSION}${DDCLIENT_VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="Ismael Peral"
 
 RUN apk add --no-cache --virtual=build-dependencies \
